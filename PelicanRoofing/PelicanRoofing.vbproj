@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -18,7 +18,7 @@
     <MyType>Custom</MyType>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44364</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -46,6 +46,9 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -62,11 +65,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -92,9 +90,124 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\facebookpixelcode.js" />
+    <Content Include="privacy-policy.aspx" />
+    <Content Include="about.aspx" />
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="financing.aspx" />
+    <Content Include="avoid-a-roofing-scam.aspx" />
+    <Content Include="commercial-services.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="css\cocoen.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\slick-theme.css" />
+    <Content Include="css\slick.css" />
+    <Content Include="estimate.aspx" />
+    <Content Include="favicon.png" />
+    <Content Include="font\fontello.svg" />
+    <Content Include="img\about-1.jpg" />
+    <Content Include="img\about-2.jpg" />
+    <Content Include="img\about-3.jpg" />
+    <Content Include="img\before-after\Malarkey-Highlander-Sienna-Blend.jpg" />
+    <Content Include="img\before-after\Malarkey-Windsor-XL-Weathered-Wood.jpg" />
+    <Content Include="img\before-after\commercial-roof.jpg" />
+    <Content Include="img\before-after\deck.jpg" />
+    <Content Include="img\before-after\Malarkey-Vista-Midnight-Black.jpg" />
+    <Content Include="img\before-after\roofs.jpg" />
+    <Content Include="img\before-after\shutters.jpg" />
+    <Content Include="img\brands-bbb.png" />
+    <Content Include="img\brands\brands-bbb.gif" />
+    <Content Include="img\brands\brands-ct.png" />
+    <Content Include="img\brands\brands-gaf.gif" />
+    <Content Include="img\brands\brands-oc.gif" />
+    <Content Include="img\brands\brands-tam.gif" />
+    <Content Include="img\CertainTeed.png" />
+    <Content Include="img\construction-site-bg-grey.jpg" />
+    <Content Include="img\feature-vid-thumb.png" />
+    <Content Include="img\insurance.jpg" />
+    <Content Include="img\license.jpg" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\MalarkeyRoofingProducts.png" />
+    <Content Include="img\roof-about.jpg" />
+    <Content Include="img\slideshow\gutters-2.jpg" />
+    <Content Include="img\slideshow\gutters.jpg" />
+    <Content Include="img\slideshow\harmony.svg" />
+    <Content Include="img\slideshow\house.jpg" />
+    <Content Include="img\slideshow\img1.jpg" />
+    <Content Include="img\slideshow\img2.jpg" />
+    <Content Include="img\slideshow\img3.jpg" />
+    <Content Include="img\slideshow\kirkwood1.jpg" />
+    <Content Include="img\slideshow\kirkwood2.jpg" />
+    <Content Include="img\slideshow\kirkwood3.jpg" />
+    <Content Include="img\slideshow\kirkwood4.jpg" />
+    <Content Include="img\slideshow\kirkwood5.jpg" />
+    <Content Include="img\slideshow\Malarkey-Highlander-Sienna-Blend.jpg" />
+    <Content Include="img\slideshow\Malarkey-Legacy-Black-Oak.jpg" />
+    <Content Include="img\slideshow\Malarkey-Vista-Midnight-Black.jpg" />
+    <Content Include="img\slideshow\Malarkey-Windsor-XL-Weathered-Wood.jpg" />
+    <Content Include="img\slideshow\roofs.jpg" />
+    <Content Include="img\slideshow\VideoGoesHere.jpg" />
+    <Content Include="img\slideshow\WOODCREST1.jpg" />
+    <Content Include="img\slideshow\WOODCREST2.jpg" />
+    <Content Include="img\slideshow\WOODCREST3.jpg" />
+    <Content Include="img\slideshow\WOODCREST4.jpg" />
+    <Content Include="img\storm-damage-before-after\after-roof.jpg" />
+    <Content Include="img\storm-damage-before-after\after.jpg" />
+    <Content Include="img\storm-damage-before-after\before-roof.jpg" />
+    <Content Include="img\storm-damage-before-after\before.jpg" />
+    <Content Include="img\storm-damage-before-after\storm-after-1.jpg" />
+    <Content Include="img\storm-damage-before-after\storm-before-1.jpg" />
+    <Content Include="img\storm-damage\five.jpg" />
+    <Content Include="img\storm-damage\four.jpg" />
+    <Content Include="img\storm-damage\one.jpg" />
+    <Content Include="img\storm-damage\six.jpg" />
+    <Content Include="img\storm-damage\three.jpg" />
+    <Content Include="img\storm-damage\two.jpg" />
+    <Content Include="img\tamko-lifetime-warranty.png" />
+    <Content Include="inc\brands.inc" />
+    <Content Include="inc\experience.inc" />
+    <Content Include="inc\footer.inc" />
+    <Content Include="inc\header.inc" />
+    <Content Include="inc\inline-cta-claim.inc" />
+    <Content Include="inc\inline-cta.inc" />
+    <Content Include="inc\mobile-nav.inc" />
+    <Content Include="inc\services.inc" />
+    <Content Include="inc\sidebar-address.inc" />
+    <Content Include="inc\sidebar-insurance.inc" />
+    <Content Include="inc\sidebar-referances.inc" />
+    <Content Include="inc\sidebar-services.inc" />
+    <Content Include="inc\sidebar-license.inc" />
+    <Content Include="inc\sidebar-storm.inc" />
+    <Content Include="inc\slideshow.inc" />
+    <Content Include="inc\storm.inc" />
+    <Content Include="inc\testimonial.inc" />
+    <Content Include="index.aspx" />
+    <Content Include="js\cocoen.min.js" />
+    <Content Include="js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="js\vendor\unslider.js" />
+    <Content Include="abitasprings.aspx" />
+    <Content Include="MailRequest.aspx" />
+    <Content Include="residential-services.aspx" />
+    <Content Include="robots.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sitemap.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="storm-damage.aspx" />
+    <Content Include="warranty-questions.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MailRequest.aspx.designer.vb">
+      <DependentUpon>MailRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailRequest.aspx.vb">
+      <DependentUpon>MailRequest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -124,22 +237,32 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="font\fontello.eot" />
+    <Content Include="font\fontello.ttf" />
+    <Content Include="font\fontello.woff" />
+    <Content Include="font\fontello.woff2" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <Content Include="sftp-config.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="PelicanRoofing\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -168,7 +291,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61071</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61071/</IISUrl>
+          <IISUrl>https://localhost:44364/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -182,7 +305,7 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
